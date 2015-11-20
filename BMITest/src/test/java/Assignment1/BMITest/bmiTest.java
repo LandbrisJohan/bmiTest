@@ -51,9 +51,18 @@ public class bmiTest
 		int height = 200;
 		int weight = 100;
 		test = calcHelper.calculateBmi(height, weight);
-		System.out.print(test);
 		assertEquals(25.0, test, 1);				//Allowing up to 1.0 wrong.
 	}
 
+	@Test
+	public void calculateBmiDifferentValuesTest()
+	{
+		Bmi calcHelper = new Bmi();
+		double test = 0;
+		int height = 190;
+		int weight = 80;
+		test = calcHelper.calculateBmi(height, weight);
+		assertEquals(22.16, test, 1);				
+	}
 	
 }
