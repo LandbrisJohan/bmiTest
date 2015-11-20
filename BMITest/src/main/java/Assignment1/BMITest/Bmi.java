@@ -6,10 +6,17 @@ public class Bmi
 {
 	public int getInt(Scanner input)
 	{
+		if (isInteger(input.nextLine())==true)
+		{
 		int inp = input.nextInt();
 		if (inp>0||inp<250)
 		{
 			return inp;
+		}
+		else
+		{
+			return 0;
+		}
 		}
 		else
 		{

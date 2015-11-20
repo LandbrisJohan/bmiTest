@@ -38,9 +38,9 @@ public class bmiTest
 	{
 		String test = "100";
 		boolean bol = testHelper.isInteger(test);
-		//assertTrue(bol);
 		assertTrue(bol);
 	}
 	
+
 	
 }
