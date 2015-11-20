@@ -74,4 +74,17 @@ public class bmiTest
 		assertEquals(22.16, test, 1);				
 	}
 	
+	@Test
+	public void isPersonObeseTest()
+	{
+		Bmi bmiHelper = new Bmi();
+		boolean bol = false;
+		double test = bmiHelper.defineBmi(25);
+		if(test>30)
+		{
+			bol=true;
+		}
+		
+		assertTrue(bol);
+	}
 }
