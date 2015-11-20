@@ -71,6 +71,10 @@ public class Bmi
 		{
 			return "Overweight";
 		}
+		else if (bmi<25&&bmi>19)
+		{
+			return "Normal";
+		}
 		else
 		{
 			return "";
