@@ -46,10 +46,13 @@ public class bmiTest
 	@Test
 	public void calculateBmiTest()
 	{
+		Bmi calcHelper = new Bmi();
+		double test = 0;
 		int height = 200;
 		int weight = 100;
-		int test = testHelper.calculateBmi(height, weight);
-		assertTrue(25, test);
+		test = calcHelper.calculateBmi(height, weight);
+		System.out.print(test);
+		assertEquals(25.0, test, 1);				//Allowing up to 1.0 wrong.
 	}
 
 	

@@ -54,4 +54,10 @@ public class Bmi
 	    }
 	    return true;
 	}
+	
+	public double calculateBmi(int height, int weight)
+	{
+		double heightInMeters = height/100;
+		return (weight/(heightInMeters*heightInMeters));
+	}
 }
