@@ -20,9 +20,18 @@ public class bmiTest
 	}
 	
 	@Test
-	public void getsPositiveInt() throws Exception {
+	public void getsPositiveInt(){
 	//	testHelper = new Bmi();
 	    Mockito.when(testHelper.getInt(null)).thenReturn(1);
 	    assertEquals(1, testHelper.getInt(null));
 	}
+	
+	@Test
+	public void getRealisticInt()
+	{
+	    Mockito.when(testHelper.getInt(null)).thenReturn(1000);
+	    assertEquals(80, testHelper.getInt(null));
+	}
+	
+	
 }
