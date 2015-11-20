@@ -1,9 +1,21 @@
 package Assignment1.BMITest;
 
+import java.util.Scanner;
+
 public class Bmi 
 {
-	public double getDouble()
+	public int getInt(Scanner input)
 	{
-		return 5;
+		int inp = input.nextInt();
+		if (inp>0)
+		{
+			return inp;
+		}
+		else
+		{
+			return 0;
+		}
+
 	}
+	
 }
