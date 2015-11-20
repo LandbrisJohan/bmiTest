@@ -9,7 +9,7 @@ public class Bmi
 		if (isInteger(input)==true)
 		{
 		int inp = Integer.parseInt(input);
-		if (inp>0&&inp<250)
+		if (inp>0 && inp<250)
 		{
 			return inp;
 		}
