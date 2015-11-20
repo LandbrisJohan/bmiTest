@@ -30,6 +30,7 @@ public class bmiTest
 	public void getRealisticIntTest()
 	{
 	    Mockito.when(testHelper.getInt(null)).thenReturn(180);
+//	    Mockito.when(testHelper.isInteger("180")).thenReturn(true);			
 	    assertEquals(180, testHelper.getInt(null));
 	}
 	
@@ -41,6 +42,15 @@ public class bmiTest
 		assertTrue(bol);
 	}
 	
+	
+	@Test
+	public void calculateBmiTest()
+	{
+		int height = 200;
+		int weight = 100;
+		int test = testHelper.calculateBmi(height, weight);
+		assertTrue(25, test);
+	}
 
 	
 }
