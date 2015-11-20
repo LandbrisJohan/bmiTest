@@ -35,6 +35,14 @@ public class bmiTest
 	}
 	
 	@Test
+	public void getRealisticIntRevisitedTest()
+	{
+		String input = "200";
+		int test = testHelper.getInt(input);
+		assertEquals(200, test);
+	}
+	
+	@Test
 	public void isInputIntegerTest()
 	{
 		String test = "100";
