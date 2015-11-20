@@ -60,5 +60,17 @@ public class Bmi
 		double heightInMeters = (double) height/100;
 		return (weight/(heightInMeters*heightInMeters));
 	}
+	
+	public String defineBmi(double bmi)
+	{
+		if (bmi>30)
+		{
+			return "Obese.";
+		}
+		else
+		{
+			return "";
+		}
+	}
 }
 
