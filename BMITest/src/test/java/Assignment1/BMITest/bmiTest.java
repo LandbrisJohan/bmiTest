@@ -81,4 +81,12 @@ public class bmiTest
 		String test = bmiHelper.defineBmi(31);	
 		assertEquals("Obese", test);
 	}
+	
+	@Test
+	public void isPersonOverweightTest()
+	{
+		Bmi bmiHelper = new Bmi();
+		String test = bmiHelper.defineBmi(10);	
+		assertEquals("Overweight", test);
+	}
 }
