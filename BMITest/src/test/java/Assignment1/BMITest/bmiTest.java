@@ -22,7 +22,7 @@ public class bmiTest
 	@Test
 	public void getsPositiveHeigthInt() throws Exception {
 		testHelper = new Bmi();
-	    Mockito.when(testHelper.getDouble()).thenReturn(-1);
+	    Mockito.when(testHelper.getDouble()).thenReturn((double) -1);
 
 	    assertEquals(1, -1);
 	}
