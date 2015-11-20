@@ -67,11 +67,11 @@ public class Bmi
 		{
 			return "Obese";
 		}
-		else if (bmi<30&&bmi>25)
+		else if (bmi<=30&&bmi>25)
 		{
 			return "Overweight";
 		}
-		else if (bmi<25&&bmi>19)
+		else if (bmi<=25&&bmi>19)
 		{
 			return "Normal";
 		}

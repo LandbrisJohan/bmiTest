@@ -94,7 +94,7 @@ public class bmiTest
 	public void isPersonNormalWeightTest()
 	{
 		Bmi bmiHelper = new Bmi();
-		String test = bmiHelper.defineBmi(23);	
+		String test = bmiHelper.defineBmi(25);	
 		assertEquals("Normal", test);
 	}
 }
