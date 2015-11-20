@@ -37,8 +37,9 @@ public class bmiTest
 	@Test
 	public void getRealisticIntRevisitedTest()
 	{
+		Bmi newHelper = new Bmi();
 		String input = "200";
-		int test = testHelper.getInt(input);
+		int test = newHelper.getInt(input);
 		assertEquals(200, test);
 	}
 	
