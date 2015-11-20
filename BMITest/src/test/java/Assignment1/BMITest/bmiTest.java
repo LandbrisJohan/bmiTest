@@ -22,15 +22,15 @@ public class bmiTest
 	@Test
 	public void getsPositiveInt(){
 	//	testHelper = new Bmi();
-	    Mockito.when(testHelper.getInt(null)).thenReturn(1);
-	    assertEquals(1, testHelper.getInt(null));
+	    Mockito.when(testHelper.getInt(null)).thenReturn(180);
+	    assertEquals(180, testHelper.getInt(null));
 	}
 	
 	@Test
 	public void getRealisticInt()
 	{
-	    Mockito.when(testHelper.getInt(null)).thenReturn(1000);
-	    assertEquals(80, testHelper.getInt(null));
+	    Mockito.when(testHelper.getInt(null)).thenReturn(0);
+	    assertEquals(180, testHelper.getInt(null));
 	}
 	
 	

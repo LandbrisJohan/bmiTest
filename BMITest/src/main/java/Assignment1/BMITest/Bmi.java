@@ -7,7 +7,7 @@ public class Bmi
 	public int getInt(Scanner input)
 	{
 		int inp = input.nextInt();
-		if (inp>0)
+		if (inp>0||inp<250)
 		{
 			return inp;
 		}
@@ -15,7 +15,6 @@ public class Bmi
 		{
 			return 0;
 		}
-
 	}
 	
 }
