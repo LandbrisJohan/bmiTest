@@ -78,13 +78,7 @@ public class bmiTest
 	public void isPersonObeseTest()
 	{
 		Bmi bmiHelper = new Bmi();
-		boolean bol = false;
-		double test = bmiHelper.defineBmi(25);
-		if(test>30)
-		{
-			bol=true;
-		}
-		
-		assertTrue(bol);
+		String test = bmiHelper.defineBmi(29);	
+		assertEquals("Obese", test);
 	}
 }

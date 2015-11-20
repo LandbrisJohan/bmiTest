@@ -65,7 +65,7 @@ public class Bmi
 	{
 		if (bmi>30)
 		{
-			return "Obese.";
+			return "Obese";
 		}
 		else
 		{
