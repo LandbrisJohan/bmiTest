@@ -36,7 +36,9 @@ public class bmiTest
 	@Test
 	public void isInputIntegerTest()
 	{
-		boolean bol = testHelper.isInteger("test");
+		String test = "100";
+		boolean bol = testHelper.isInteger(test);
+		//assertTrue(bol);
 		assertTrue(bol);
 	}
 	
