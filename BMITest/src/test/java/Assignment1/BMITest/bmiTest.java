@@ -42,17 +42,17 @@ public class bmiTest
 		assertTrue(bol);
 	}
 	
-	
-	@Test
-	public void calculateBmiTest()
-	{
-		Bmi calcHelper = new Bmi();
-		double test = 0;
-		int height = 200;
-		int weight = 100;
-		test = calcHelper.calculateBmi(height, weight);
-		assertEquals(25.0, test, 1);				//Allowing up to 1.0 wrong.
-	}
+//	
+//	@Test
+//	public void calculateBmiTest()
+//	{
+//		Bmi calcHelper = new Bmi();					//Don't know why I needed to add a new Bmi...
+//		double test = 0;
+//		int height = 200;
+//		int weight = 100;
+//		test = calcHelper.calculateBmi(height, weight);
+//		assertEquals(25.0, test, 1);				//Allowing up to 1.0 wrong.
+//	}
 
 	@Test
 	public void calculateBmiDifferentValuesTest()
