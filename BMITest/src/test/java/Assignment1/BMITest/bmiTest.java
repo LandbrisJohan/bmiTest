@@ -20,17 +20,24 @@ public class bmiTest
 	}
 	
 	@Test
-	public void getsPositiveInt(){
+	public void getsPositiveIntTest(){
 	//	testHelper = new Bmi();
 	    Mockito.when(testHelper.getInt(null)).thenReturn(180);
 	    assertEquals(180, testHelper.getInt(null));
 	}
 	
 	@Test
-	public void getRealisticInt()
+	public void getRealisticIntTest()
 	{
 	    Mockito.when(testHelper.getInt(null)).thenReturn(180);
 	    assertEquals(180, testHelper.getInt(null));
+	}
+	
+	@Test
+	public void isInputIntegerTest()
+	{
+		boolean bol = testHelper.isInteger("test");
+		assertTrue(bol);
 	}
 	
 	
