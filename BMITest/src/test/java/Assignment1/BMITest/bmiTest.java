@@ -29,7 +29,7 @@ public class bmiTest
 	@Test
 	public void getRealisticInt()
 	{
-	    Mockito.when(testHelper.getInt(null)).thenReturn(0);
+	    Mockito.when(testHelper.getInt(null)).thenReturn(180);
 	    assertEquals(180, testHelper.getInt(null));
 	}
 	
