@@ -102,7 +102,7 @@ public class bmiTest
 	public void isPersonUnderWeightTest()
 	{
 		Bmi bmiHelper = new Bmi();
-		String test = bmiHelper.defineBmi(30);	
+		String test = bmiHelper.defineBmi(20);	
 		assertEquals("Underweigth", test);
 	}
 }
