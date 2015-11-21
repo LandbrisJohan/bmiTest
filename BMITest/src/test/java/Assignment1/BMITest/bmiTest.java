@@ -110,4 +110,15 @@ public class bmiTest
 	{
 		Mockito.doCallRealMethod().when(testHelper).printStartScreen();
 	}
+	@Test
+	public void bmiShouldReturnOnlyOneDecimalTest()
+	{
+		Bmi calcHelper = new Bmi();
+		double test = 0;
+		int height = 190;
+		int weight = 80;
+		test = calcHelper.calculateBmi(height, weight);
+		String decValue = Double.toString(test);
+		assertEquals("22.2", decValue);	
+	}
 }
