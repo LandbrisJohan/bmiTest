@@ -108,6 +108,6 @@ public class bmiTest
 	@Test
 	public void displayStartScreenTest()
 	{
-		assertTrue(Mockito.when(testHelper.printStartScreen()).thenReturn(true));	    
+		Mockito.doCallRealMethod().when(testHelper).printStartScreen();
 	}
 }

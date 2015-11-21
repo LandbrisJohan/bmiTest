@@ -4,6 +4,44 @@ import java.util.Scanner;
 
 public class Bmi 
 {
+	Scanner input = new Scanner(System.in);
+	public static void main(String[] args)
+	{
+		Bmi b = new Bmi();
+		b.printStartScreen();
+	}
+	public void printStartScreen()
+	{
+		int height = 0;
+		int weight = 0;
+		System.out.println("Height in cm: ");	
+		String inp = input.nextLine();
+		if (getInt(inp)==0)
+		{
+			printError();
+		}
+		else
+		{
+			height = getInt(inp);
+			System.out.println("Weight in kg: ");
+			inp = input.nextLine();
+		}
+		if (getInt(inp)==0)
+		{
+			printError();
+		}
+		else
+		{
+			weight = getInt(inp);
+			System.out.println(calculateBmi(height,weight));
+		}	
+	}
+	
+	public void printError()
+	{
+		System.out.println("Wrong input!");
+		printStartScreen();
+	}
 	public int getInt(String input)
 	{
 		if (isInteger(input)==true)
