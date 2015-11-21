@@ -2,6 +2,8 @@ package Assignment1.BMITest;
 
 import java.util.Scanner;
 
+import org.mockito.internal.configuration.DefaultInjectionEngine;
+
 public class Bmi 
 {
 	Scanner input = new Scanner(System.in);
@@ -33,14 +35,15 @@ public class Bmi
 		else
 		{
 			weight = getInt(inp);
-			System.out.println(calculateBmi(height,weight));
+			double bmi = calculateBmi(height,weight);
+			System.out.println("Your BMI is: "+bmi+" and is defined as "+defineBmi(bmi)+".");
 		}	
 	}
 	
 	public void printError()
 	{
-		System.out.println("Wrong input!");
-		printStartScreen();
+		System.out.println("Wrong input, you can only enter numbers between 0 and 250!");
+		System.exit(0);
 	}
 	public int getInt(String input)
 	{
