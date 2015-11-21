@@ -105,4 +105,9 @@ public class bmiTest
 		String test = bmiHelper.defineBmi(19);	
 		assertEquals("Underweigth", test);
 	}
+	@Test
+	public void displayStartScreenTest()
+	{
+		assertTrue(Mockito.when(testHelper.printStartScreen()).thenReturn(true));	    
+	}
 }
