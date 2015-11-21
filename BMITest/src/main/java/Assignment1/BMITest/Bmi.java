@@ -1,5 +1,6 @@
 package Assignment1.BMITest;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 import org.mockito.internal.configuration.DefaultInjectionEngine;
@@ -99,7 +100,11 @@ public class Bmi
 	public double calculateBmi(int height, int weight)
 	{
 		double heightInMeters = (double) height/100;
-		return (weight/(heightInMeters*heightInMeters));
+		double bmi = (weight/(heightInMeters*heightInMeters));
+		bmi = bmi*10;
+		bmi = Math.round(bmi);
+		bmi = bmi /10;
+		return bmi;
 	}
 	
 	public String defineBmi(double bmi)
