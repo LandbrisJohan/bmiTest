@@ -1,9 +1,6 @@
 package Assignment1.BMITest;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
-
-import org.mockito.internal.configuration.DefaultInjectionEngine;
 
 public class Bmi 
 {

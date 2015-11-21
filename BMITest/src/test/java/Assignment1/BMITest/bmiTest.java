@@ -21,7 +21,6 @@ public class bmiTest
 	
 	@Test
 	public void getsPositiveIntTest(){
-	//	testHelper = new Bmi();
 	    Mockito.when(testHelper.getInt(null)).thenReturn(180);
 	    assertEquals(180, testHelper.getInt(null));
 	}
@@ -29,8 +28,7 @@ public class bmiTest
 	@Test
 	public void getRealisticIntTest()
 	{
-	    Mockito.when(testHelper.getInt(null)).thenReturn(180);
-//	    Mockito.when(testHelper.isInteger("180")).thenReturn(true);			
+	    Mockito.when(testHelper.getInt(null)).thenReturn(180);		
 	    assertEquals(180, testHelper.getInt(null));
 	}
 	
@@ -55,7 +53,7 @@ public class bmiTest
 	@Test
 	public void calculateBmiTest()
 	{
-		Bmi calcHelper = new Bmi();					//Don't know why I needed to add a new Bmi...
+		Bmi calcHelper = new Bmi();					//Don't know why I needed to add a new Bmi. EDIT. Probably because of Mocking!
 		double test = 0;
 		int height = 200;
 		int weight = 100;
