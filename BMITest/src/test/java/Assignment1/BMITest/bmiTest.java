@@ -115,10 +115,10 @@ public class bmiTest
 	{
 		Bmi calcHelper = new Bmi();
 		double test = 0;
-		int height = 190;
-		int weight = 80;
+		int height = 200;
+		int weight = 100;
 		test = calcHelper.calculateBmi(height, weight);
 		String decValue = Double.toString(test);
-		assertEquals("22.2", decValue);	
+		assertEquals("25.0", decValue);	
 	}
 }
