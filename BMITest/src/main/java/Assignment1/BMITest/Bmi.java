@@ -32,6 +32,7 @@ public class Bmi
 		}
 		else
 		{
+			
 			weight = getInt(inp);
 			double bmi = calculateBmi(height,weight);
 			System.out.println("Your BMI is: "+bmi+" and is defined as "+defineBmi(bmi)+".");
