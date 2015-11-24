@@ -63,6 +63,13 @@ public class bmiTest
 		assertTrue(bol);
 	}
 	
+	@Test
+	public void isInputIntegerLengthTest()
+	{
+		String test = "";
+		boolean bol = testHelper.isInteger(test);
+		assertTrue(bol);
+	}
 	
 	@Test
 	public void calculateBmiTest()
