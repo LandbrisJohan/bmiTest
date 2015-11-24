@@ -48,11 +48,11 @@ public class bmiTest
 		assertEquals(0, test);	
 	}
 	@Test
-	public void returns0IfInputisNullTest()
+	public void returns0IfInputIsNullTest()
 	{
 		Bmi newHelper = new Bmi();
 		int test = newHelper.getInt(null);
-		assertEquals(1, test);		
+		assertEquals(0, test);		
 	}
 	
 	@Test
