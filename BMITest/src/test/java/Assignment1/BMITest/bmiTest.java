@@ -68,7 +68,7 @@ public class bmiTest
 	{
 		String test = "";
 		boolean bol = testHelper.isInteger(test);
-		assertTrue(bol);
+		assertFalse(bol);
 	}
 	
 	@Test
