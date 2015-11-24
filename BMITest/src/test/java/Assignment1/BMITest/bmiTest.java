@@ -40,6 +40,13 @@ public class bmiTest
 		int test = newHelper.getInt(input);
 		assertEquals(200, test);
 	}
+	@Test
+	public void returns0IfNotRealisticIntTest()
+	{
+		Bmi newHelper = new Bmi();
+		int test = newHelper.getInt("0");
+		assertEquals(0, test);
+	}
 	
 	@Test
 	public void isInputIntegerTest()
@@ -107,6 +114,7 @@ public class bmiTest
 	public void displayStartScreenTest()
 	{
 		Mockito.doCallRealMethod().when(testHelper).printStartScreen();
+		//Mockito.verify(testHelper.printStartScreen());
 	}
 	@Test
 	public void bmiShouldReturnOnlyOneDecimalTest()
