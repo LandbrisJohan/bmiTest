@@ -46,6 +46,7 @@ public class bmiTest
 		Bmi newHelper = new Bmi();
 		int test = newHelper.getInt("0");
 		assertEquals(0, test);
+		
 	}
 	
 	@Test
