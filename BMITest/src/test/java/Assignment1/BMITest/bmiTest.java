@@ -33,14 +33,6 @@ public class bmiTest {
 	}
 
 //	@Test
-//	public void getRealisticIntRevisitedTest() {
-//		Bmi newHelper = new Bmi();
-//		String input = "200";
-//		int test = newHelper.getInt(input);
-//		assertEquals(200, test);
-//	}
-//
-//	@Test
 //	public void returns0IfNotRealisticIntTest() {
 //		Bmi newHelper = new Bmi();
 //		int test = newHelper.getInt("0");
@@ -54,12 +46,6 @@ public class bmiTest {
 //		assertEquals(0, test);
 //	}
 //
-//	@Test
-//	public void isInputIntegerTest() {
-//		String test = "100";
-//		boolean bol = testHelper.isInteger(test);
-//		assertTrue(bol);
-//	}
 //
 //	@Test
 //	public void isInputIntegerLengthTest() {
@@ -144,4 +130,17 @@ public class bmiTest {
 		assertEquals(100, test2);
 		Mockito.verify(isI).isInputInteger(input);
 	}
+	
+	@Test
+	public void isNotIntegerMockTest() {
+		Bmi newHelper = new Bmi();
+		newHelper.setIsi(isI);
+		String input = "test";
+		Mockito.when(isI.isInputInteger(input)).thenReturn(false);
+		int test = newHelper.getInt(input);
+		assertEquals(0, test);
+		Mockito.verify(isI).isInputInteger(input);
+	}
+	
+
 }
