@@ -32,28 +32,6 @@ public class bmiTest {
 		assertEquals(180, testHelper.getInt(null));
 	}
 
-//	@Test
-//	public void returns0IfNotRealisticIntTest() {
-//		Bmi newHelper = new Bmi();
-//		int test = newHelper.getInt("0");
-//		assertEquals(0, test);
-//	}
-//
-//	@Test
-//	public void returns0IfInputIsNullTest() {
-//		Bmi newHelper = new Bmi();
-//		int test = newHelper.getInt(null);
-//		assertEquals(0, test);
-//	}
-//
-//
-//	@Test
-//	public void isInputIntegerLengthTest() {
-//		String test = "";
-//		boolean bol = testHelper.isInteger(test);
-//		assertFalse(bol);
-//	}
-
 	@Test
 	public void calculateBmiTest() {
 		Bmi calcHelper = new Bmi(); // Don't know why I needed to add a new Bmi.
@@ -141,6 +119,18 @@ public class bmiTest {
 		assertEquals(0, test);
 		Mockito.verify(isI).isInputInteger(input);
 	}
+	
+	@Test
+	public void isIntegerToLargeMockTest() {
+		Bmi newHelper = new Bmi();
+		newHelper.setIsi(isI);
+		String input = "500";
+		Mockito.when(isI.isInputInteger(input)).thenReturn(true);
+		int test = newHelper.getInt(input);
+		assertEquals(0, test);
+		Mockito.verify(isI).isInputInteger(input);
+	}
+	
 	
 
 }
