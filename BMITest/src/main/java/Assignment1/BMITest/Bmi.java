@@ -4,12 +4,18 @@ import java.util.Scanner;
 
 public class Bmi {
 	Scanner input = new Scanner(System.in);
-
+	private IsIntegerIF inte;
+	
 	public static void main(String[] args) {
 		Bmi b = new Bmi();
 		b.printStartScreen();
 	}
 
+	public void setIsi(IsIntegerIF isI)
+	{
+		this.inte=isI;
+	}
+	
 	public void printStartScreen() {
 		int height = 0;
 		int weight = 0;
@@ -38,7 +44,7 @@ public class Bmi {
 	}
 
 	public int getInt(String input) {
-		if (isInteger(input) == true) {
+		if (inte.isInputInteger(input) == true) {
 			int inp = Integer.parseInt(input);
 			if (inp > 0 && inp < 250) {
 				return inp;
@@ -48,30 +54,6 @@ public class Bmi {
 		} else {
 			return 0;
 		}
-	}
-
-	public static boolean isInteger(String str) {
-		if (str == null) {
-			return false;
-		}
-		int length = str.length();
-		if (length == 0) {
-			return false;
-		}
-		int i = 0;
-		if (str.charAt(0) == '-') {
-			if (length == 1) {
-				return false;
-			}
-			i = 1;
-		}
-		for (; i < length; i++) {
-			char c = str.charAt(i);
-			if (c < '0' || c > '9') {
-				return false;
-			}
-		}
-		return true;
 	}
 
 	public double calculateBmi(int height, int weight) {
