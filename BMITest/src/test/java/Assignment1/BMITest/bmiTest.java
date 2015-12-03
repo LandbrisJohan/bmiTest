@@ -131,6 +131,17 @@ public class bmiTest {
 		Mockito.verify(isI).isInputInteger(input);
 	}
 	
+	@Test
+	public void isIntegerToSmallMockTest() {
+		Bmi newHelper = new Bmi();
+		newHelper.setIsi(isI);
+		String input = "-1";
+		Mockito.when(isI.isInputInteger(input)).thenReturn(true);
+		int test = newHelper.getInt(input);
+		assertEquals(0, test);
+		Mockito.verify(isI).isInputInteger(input);
+	}
+	
 	
 
 }
