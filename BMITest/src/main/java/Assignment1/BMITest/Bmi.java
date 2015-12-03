@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class Bmi {
 	Scanner input = new Scanner(System.in);
-	private IsIntegerIF inte;
+	private static IsIntegerIF inte;
 	
 	public static void main(String[] args) {
 		Bmi b = new Bmi();
+		inte = new IsInteger();
 		b.printStartScreen();
 	}
 
 	public void setIsi(IsIntegerIF isI)
 	{
-		this.inte=isI;
+		inte=isI;
 	}
 	
 	public void printStartScreen() {
