@@ -12,6 +12,9 @@ public class bmiTest {
 	@Mock
 	Bmi testHelper;
 
+	@Mock
+	IsIntegerIF isI;
+	
 	@Before
 	public void initMocks() {
 		MockitoAnnotations.initMocks(this);
@@ -29,41 +32,41 @@ public class bmiTest {
 		assertEquals(180, testHelper.getInt(null));
 	}
 
-	@Test
-	public void getRealisticIntRevisitedTest() {
-		Bmi newHelper = new Bmi();
-		String input = "200";
-		int test = newHelper.getInt(input);
-		assertEquals(200, test);
-	}
-
-	@Test
-	public void returns0IfNotRealisticIntTest() {
-		Bmi newHelper = new Bmi();
-		int test = newHelper.getInt("0");
-		assertEquals(0, test);
-	}
-
-	@Test
-	public void returns0IfInputIsNullTest() {
-		Bmi newHelper = new Bmi();
-		int test = newHelper.getInt(null);
-		assertEquals(0, test);
-	}
-
-	@Test
-	public void isInputIntegerTest() {
-		String test = "100";
-		boolean bol = testHelper.isInteger(test);
-		assertTrue(bol);
-	}
-
-	@Test
-	public void isInputIntegerLengthTest() {
-		String test = "";
-		boolean bol = testHelper.isInteger(test);
-		assertFalse(bol);
-	}
+//	@Test
+//	public void getRealisticIntRevisitedTest() {
+//		Bmi newHelper = new Bmi();
+//		String input = "200";
+//		int test = newHelper.getInt(input);
+//		assertEquals(200, test);
+//	}
+//
+//	@Test
+//	public void returns0IfNotRealisticIntTest() {
+//		Bmi newHelper = new Bmi();
+//		int test = newHelper.getInt("0");
+//		assertEquals(0, test);
+//	}
+//
+//	@Test
+//	public void returns0IfInputIsNullTest() {
+//		Bmi newHelper = new Bmi();
+//		int test = newHelper.getInt(null);
+//		assertEquals(0, test);
+//	}
+//
+//	@Test
+//	public void isInputIntegerTest() {
+//		String test = "100";
+//		boolean bol = testHelper.isInteger(test);
+//		assertTrue(bol);
+//	}
+//
+//	@Test
+//	public void isInputIntegerLengthTest() {
+//		String test = "";
+//		boolean bol = testHelper.isInteger(test);
+//		assertFalse(bol);
+//	}
 
 	@Test
 	public void calculateBmiTest() {
@@ -129,5 +132,16 @@ public class bmiTest {
 		test = calcHelper.calculateBmi(height, weight);
 		String decValue = Double.toString(test);
 		assertEquals("22.2", decValue);
+	}
+	
+	@Test
+	public void isInputIntegerMockTest() {
+		String input = "100";
+		Bmi test = new Bmi();
+		test.setIsi(isI);
+		Mockito.when(isI.isInputInteger(input)).thenReturn(true);
+		int test2 = test.getInt(input);
+		assertEquals(100, test2);
+		Mockito.verify(isI).isInputInteger(input);
 	}
 }
