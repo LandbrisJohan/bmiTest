@@ -161,5 +161,12 @@ public class bmiTest {
 		IsInteger test = new IsInteger();
 		assertFalse(test.isInputInteger("-1"));
 	}
+	
+	@Test
+	public void doesWholeStringConsistOfIntegersTest()
+	{
+		IsInteger test = new IsInteger();
+		assertFalse(test.isInputInteger("test"));
+	}
 
 }
