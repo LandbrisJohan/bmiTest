@@ -142,6 +142,11 @@ public class bmiTest {
 		Mockito.verify(isI).isInputInteger(input);
 	}
 	
-	
+	@Test
+	public void isIntegerNullInputTest()
+	{
+		IsInteger test = new IsInteger();
+		assertFalse(test.isInputInteger(null));
+	}
 
 }
