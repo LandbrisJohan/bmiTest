@@ -13,8 +13,14 @@ public class IsInteger implements IsIntegerIF{
 		if (str.charAt(0) == '-') {
 			return false;
 		}
+		int i = 0;
+		for (; i < length; i++) {
+			char c = str.charAt(i);
+			if (c < '0' || c > '9') {
+				return false;
+			}
+		}
 		
-		
-		return false;
+		return true;
 	}
 }
