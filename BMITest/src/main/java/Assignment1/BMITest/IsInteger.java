@@ -6,6 +6,10 @@ public class IsInteger implements IsIntegerIF{
 		if (str == null) {
 			return false;
 		}
-		return false;
+		int length = str.length();
+		if (length == 0) {
+			return false;
+		}
+		return true;
 	}
 }
