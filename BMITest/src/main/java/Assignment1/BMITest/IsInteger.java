@@ -10,6 +10,7 @@ public class IsInteger implements IsIntegerIF{
 		if (length == 0) {
 			return false;
 		}
-		return true;
+		
+		return false;
 	}
 }
