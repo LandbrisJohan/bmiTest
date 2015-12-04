@@ -154,5 +154,12 @@ public class bmiTest {
 		IsInteger test = new IsInteger();
 		assertFalse(test.isInputInteger(""));
 	}
+	
+	@Test
+	public void isIntegerPositiveTest()
+	{
+		IsInteger test = new IsInteger();
+		assertFalse(test.isInputInteger("-1"));
+	}
 
 }
