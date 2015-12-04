@@ -14,6 +14,7 @@ public class IsInteger implements IsIntegerIF{
 			return false;
 		}
 		
+		
 		return false;
 	}
 }
