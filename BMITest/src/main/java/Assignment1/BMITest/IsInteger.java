@@ -10,6 +10,9 @@ public class IsInteger implements IsIntegerIF{
 		if (length == 0) {
 			return false;
 		}
+		if (str.charAt(0) == '-') {
+			return false;
+		}
 		
 		return false;
 	}
